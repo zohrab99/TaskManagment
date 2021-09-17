@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert user table
+      author: Zohrab Suleymanov
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: username
+                  value: "admin"
+              - column:
+                  name: password
+                  value: "$2a$10$in5YttMPRoojsSleV8mEmOgkcbU1lKLIG6Arql97wIyw0lBqC4z0i"
+              - column:
+                  name: role_id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Zohrab"
+              - column:
+                  name: surname
+                  value: "Suleymanov"
+              - column:
+                  name: age
+                  value: 20
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: username
+                  value: "student"
+              - column:
+                  name: password
+                  value: "$2a$10$in5YttMPRoojsSleV8mEmOgkcbU1lKLIG6Arql97wIyw0lBqC4z0i"
+              - column:
+                  name: role_id
+                  value: 2
+              - column:
+                  name: name
+                  value: "yusif"
+              - column:
+                  name: surname
+                  value: "haciyev"
+              - column:
+                  name: age
+                  value: 21
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: username
+                  value: "teacher"
+              - column:
+                  name: password
+                  value: "$2a$10$in5YttMPRoojsSleV8mEmOgkcbU1lKLIG6Arql97wIyw0lBqC4z0i"
+              - column:
+                  name: role_id
+                  value: 3
+              - column:
+                  name: name
+                  value: "yasin"
+              - column:
+                  name: surname
+                  value: "mehdiyev"
+              - column:
+                  name: age
+                  value: 22

@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create task table
+      author: Zohrab Suleymanov
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: assigned_to
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_assigned_to
+                    references: user(id)
+              - column:
+                  name: assigned_by
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_assigned_by
+                    references: user(id)
+              - column:
+                  name: content
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rank
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: deadline
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: boolean
+                  constraints:
+                    nullable: false
+
+            remarks: table is for store user information

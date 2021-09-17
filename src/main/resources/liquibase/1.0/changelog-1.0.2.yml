@@ -1,0 +1,32 @@
+databaseChangeLog:
+- changeSet:
+    id: insert role table
+    author: Zohrab Suleymanov
+    changes:
+      - insert:
+          tableName: role
+          columns:
+            - column:
+                name: id
+                value: "1"
+            - column:
+                name: name
+                value: "admin"
+      - insert:
+          tableName: role
+          columns:
+            - column:
+                name: id
+                value: "2"
+            - column:
+                name: name
+                value: "student"
+      - insert:
+          tableName: role
+          columns:
+            - column:
+                name: id
+                value: "3"
+            - column:
+                name: name
+                value: "teacher"

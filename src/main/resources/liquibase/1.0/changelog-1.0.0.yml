@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create role table
+      author: Zohrab Suleymanov
+      changes:
+        - createTable:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+
+            remarks: table is for store user information
